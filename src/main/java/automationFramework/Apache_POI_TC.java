@@ -25,7 +25,7 @@ package automationFramework;
     //    driver.get(Constant.URL);
         
         WebDriver driver  = BrowserFactory.startBrower("firefox", Constant.URL);
-        System.out.println("Lets loginnnnnnnnnnnnnnn");
+        System.out.println("Lets login");
         SignIn_Action.Execute(driver);
 
         System.out.println("Login Successfully, now it is the time to Log Off buddy.");
