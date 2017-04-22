@@ -19,21 +19,21 @@ public class LogIn_Page {
 		this.driver = ldriver;
 	}
 	
-/*	@FindBy(how=How.ID,using="user")
-	WebElement txtbx_UserName;*/
-	
 /*	@FindBy(how=How.XPATH,using="(//a[contains(text(),'Log In')]")
 	WebElement btn_LogIn;*/
 	
 	@FindBy(how=How.XPATH,using="html/body/div[1]/div[2]/a[1]")
 	WebElement btn_LogIn;
 	
+/*	@FindBy(how=How.ID,using="user")
+	WebElement txtbx_UserName;*/
+	
 	@FindBy(how=How.XPATH,using=".//*[@id='user']")
 	WebElement txtbx_UserName;
 	
-	
 	@FindBy(how=How.ID,using="password")
 	WebElement txtbx_Password;
+
 	
 	@FindBy(how=How.ID,using="login")
 	WebElement btn_LogIn2;
@@ -43,7 +43,7 @@ public class LogIn_Page {
 		Thread.sleep(1000);
 		txtbx_UserName.sendKeys(uName);
 		txtbx_Password.sendKeys(pass);
-		btn_LogIn2.click();
+		btn_LogIn2.submit();
 		
 	}
 	

@@ -25,22 +25,7 @@ public class SignIn_Action {
 		LogIn_Page login_pageVar= PageFactory.initElements(driver, LogIn_Page.class);
 		
 		login_pageVar.login_trello(Constant.Username, Constant.Password);
-		
-		/*LogIn_Page.btn_LogIn(driver).click();
-		LogIn_Page.txtbx_UserName(driver).sendKeys(sUserName);
-		LogIn_Page.txtbx_Password(driver).sendKeys(sPassword);
-		//LogIn_Page.txtbx_Password(driver).sendKeys(Keys.ENTER);
-		System.out.println("entered password");
-		
-		
-		
-		
-		LogIn_Page.btn_LogIn2(driver).submit();*/
-		
-	/*	System.out.println("HomePage");*/
-		// lnk_myAccount
-	/*	Home_Page.lnk_myAccount(driver).click();*/
-	//	Home_Page.lnk_LogOut(driver).click();
+
 
 	}
 
