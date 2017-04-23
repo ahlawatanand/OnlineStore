@@ -70,6 +70,12 @@
     <artifactId>selenium-java</artifactId>
     <version>3.3.1</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>1.4</version>
+</dependency>
 	    
     
   </dependencies>

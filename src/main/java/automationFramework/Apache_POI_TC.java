@@ -3,8 +3,12 @@ package automationFramework;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.LogStatus;
+
 import appModules.SignIn_Action;
 import appModules.Signout_Action;
+import junit.framework.Assert;
 import pageObjects.Home_Page;
 // Import Package utility.*
 import utility.BrowserFactory;
@@ -24,7 +28,20 @@ import utility.ExcelUtils;
         WebDriver driver  = BrowserFactory.startBrower("firefox", Constant.URL);
 
         SignIn_Action.Execute(driver);
-
+        
+        ExtentReports logger = ExtentReports.get(Apache_POI_TC.class);
+        logger.init("C:/Users/Anand/workspace/OnlineStore/target/Reports/AdvanceReport.html", true);
+        logger.startTest("Verify Trello page title");
+        
+        String title = driver.getTitle();
+        
+        logger.log(LogStatus.INFO, "Page title is captured");
+        
+        Assert.assertTrue(title.contains("Trello"));
+        logger.log(LogStatus.PASS, "Title is verified");
+        logger.attachScreenshot("C:/Users/Anand/Pictures/Nikon/20170416 Napier/100D5200.jpg");
+        logger.endTest();
+        
         Signout_Action.Execute(driver);
 
         driver.quit();
